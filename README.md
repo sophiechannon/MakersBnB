@@ -68,7 +68,7 @@ I'd like to be able to approve or reject requests for bookings.
 
 As a property owner,
 So my property doesn't go unbooked,
-I'd like to space to remain avaiale until I have accepted a request.
+I'd like to space to remain available until I have accepted a request.
 
 **MVP**
 - User registration / authorisation
@@ -76,3 +76,44 @@ I'd like to space to remain avaiale until I have accepted a request.
 - Display properties with name, description and price.
 - Property availability is listed in the description.
 - properties can be booked (could just be an email address initially)
+
+**Model design**
+
+USER
+
+| responsibility | collaborators |
+|----------------|---------------|
+| knows first name | |
+| knows last name | |
+| knows email address | |
+| Can request to book | |
+| Can accept or reject a booking | |
+| Can register | |
+| Can log in & out | |
+
+PROPERTY
+| responsibility | collaborators |
+|----------------|---------------|
+| can show all properties | |
+| knows name | |
+| knows description | |
+| knows price | |
+| knows availability start date | |
+| knows availability end date | |
+| knows dates booked | |
+
+**Database design**
+
+USERS
+| id | first_name | last_name | email | password |
+|----|------------|-----------|-------|----------|
+| 1 | Chris | Brown | chris@test.com	| jfkldsjf-=t43-64-gdfg |
+| 2	| Michael |	Chan |	michael@tech.com | i990-=ffff:) |
+
+PROPERTIES
+| id | name | description | price_per_night | fk owner_id  | avail_start | avail_end |
+|----|------------|-----------|-------|----------|----|-----|
+
+BOOKINGS
+| id | fk property_id | fk user_id | date | status |
+|---|---|---|---|---|
