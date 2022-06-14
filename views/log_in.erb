@@ -1,4 +1,6 @@
+<h2>Log into MakersBnB</h2>
 <div class="user_info_box">
+  <%= flash[:notice] %>
   <form action="/sessions/new" method="post">
     <label for="Email">Email</label>  
       <input type="text" name="email">     
