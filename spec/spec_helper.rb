@@ -6,11 +6,11 @@ require 'simplecov-console'
 
 ENV['ENVIRONMENT'] = 'test'
 
-#RSpec.configure do |config|
- # config.before(:each) do
- #   setup_test_database
- # end
-#end
+RSpec.configure do |config|
+ config.before(:each) do
+   setup_test_database
+ end
+end
 
 require_relative '../app.rb'
 
