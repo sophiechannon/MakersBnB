@@ -22,9 +22,11 @@ describe Property do
 
   describe ".create" do
     it "creates a new property" do
-      property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear")
+      property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear",
+                                 price: "25")
       expect(Property.all.first.name).to eq "A haunted house by the sea"
       expect(Property.all.first.description).to eq "It is an old haunted house, you will definitely love the fear"
+      expect(Property.all.first.price).to eq "25"
     end
   end
 end

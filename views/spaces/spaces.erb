@@ -3,6 +3,8 @@
 <ul>
   <% @properties.each do |property| %>
     <li><%= property.name %><br>
-    <%= property.description %></li>
+    <%= property.description %><br>
+    £<%= property.price %>
+    </li>
   <% end %>
 </ul>
