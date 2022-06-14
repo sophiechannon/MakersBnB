@@ -3,5 +3,6 @@ feature "viewing properties" do
     visit("/spaces")
     expect(page).to have_content "Book a space"
     expect(page).to have_content "Property 1"
+    expect(page).to have_content "Property 2"
   end
 end

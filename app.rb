@@ -11,6 +11,11 @@ class Makersbnb < Sinatra::Base
   end
 
   get "/spaces" do
+    @properties = [
+      "Property 1",
+      "Property 2",
+      "Property 3",
+    ]
     erb :'spaces/spaces'
   end
 
