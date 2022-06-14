@@ -1,6 +1,23 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/listing_a_property_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/viewing_properties_spec.rb": {
         "lines": [
           1,
@@ -53,6 +70,6 @@
         ]
       }
     },
-    "timestamp": 1655204226
+    "timestamp": 1655205009
   }
 }
