@@ -1,3 +1,4 @@
+
 def list_a_property(name:, description:, price:)
   visit("/spaces/new")
   fill_in("property_name", with: name)
