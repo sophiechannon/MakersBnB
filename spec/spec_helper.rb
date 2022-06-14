@@ -3,6 +3,8 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
+require 'web_helpers'
+require 'setup_test_database'
 
 ENV['ENVIRONMENT'] = 'test'
 

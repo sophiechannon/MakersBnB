@@ -1,0 +1,19 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/sophiegilder/Makers/makersbnb/spec/features/user_registration_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1655199344
+  }
+}
