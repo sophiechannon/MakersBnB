@@ -10,5 +10,9 @@ class Makersbnb < Sinatra::Base
     erb :index
   end
 
+  post '/user' do
+    'Book a space'
+  end
+
   run! if app_file == $0  
 end

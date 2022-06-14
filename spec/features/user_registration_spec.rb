@@ -3,6 +3,6 @@ feature "user registration" do
     visit '/'
     user_sign_up
     expect(page).not_to have_content "Sign up to MakersBnB"
-    expect(page).to have_button "Book a space"
+    expect(page).to have_content "Book a space"
   end
 end
