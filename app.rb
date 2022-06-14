@@ -20,5 +20,9 @@ class Makersbnb < Sinatra::Base
     erb :'/spaces/new'
   end
 
+  post "/spaces/new" do
+    redirect ("/spaces")
+  end
+
   run! if app_file == $0
 end

@@ -1,43 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/listing_a_property_spec.rb": {
+      "/Users/joe/Projects/Ruby/MakersBnB/spec/features/listing_a_property_spec.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/viewing_properties_spec.rb": {
-        "lines": [
-          1,
           null,
           1,
           1,
           1,
           null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
           1,
           1,
           1,
@@ -45,7 +18,34 @@
           null
         ]
       },
-      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/property_spec.rb": {
+      "/Users/joe/Projects/Ruby/MakersBnB/spec/features/viewing_properties_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/joe/Projects/Ruby/MakersBnB/spec/property_spec.rb": {
         "lines": [
           1,
           null,
@@ -62,6 +62,15 @@
           null,
           null,
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           null,
@@ -70,6 +79,6 @@
         ]
       }
     },
-    "timestamp": 1655205009
+    "timestamp": 1655206944
   }
 }
