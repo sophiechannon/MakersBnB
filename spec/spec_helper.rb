@@ -4,7 +4,7 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'web_helpers'
-require 'setup_test_database'
+require_relative './setup_test_database'
 require 'user'
 require 'database_helpers'
 require 'bcrypt'
@@ -12,9 +12,9 @@ require 'bcrypt'
 ENV['ENVIRONMENT'] = 'test'
 
 RSpec.configure do |config|
- config.before(:each) do
-   setup_test_database
- end
+  config.before(:each) do
+    setup_test_database
+  end
 end
 
 require_relative '../app.rb'
