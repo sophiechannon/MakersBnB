@@ -1,3 +1,5 @@
+require 'pg'
+
 class User
   attr_reader :id, :first_name, :last_name, :email
 

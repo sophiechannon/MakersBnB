@@ -14,7 +14,8 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/user' do
-    p params
+    user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
+    session[:user_id] = user.id
     'Book a space'
   end
 

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sophiegilder/Makers/makersbnb/spec/features/user_registration_spec.rb": {
+      "/Users/chrisbrown/Documents/makers/week5/MakersBnB/spec/features/user_registration_spec.rb": {
         "lines": [
           1,
           1,
@@ -13,8 +13,10 @@
           null
         ]
       },
-      "/Users/sophiegilder/Makers/makersbnb/spec/user_spec.rb": {
+      "/Users/chrisbrown/Documents/makers/week5/MakersBnB/spec/user_spec.rb": {
         "lines": [
+          1,
+          1,
           1,
           1,
           1,
@@ -29,6 +31,6 @@
         ]
       }
     },
-    "timestamp": 1655201568
+    "timestamp": 1655205827
   }
 }
