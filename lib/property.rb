@@ -1,7 +1,7 @@
 class Property
   def self.all
     [
-      "Property 1",
+      "A haunted house by the sea",
       "Property 2",
       "Property 3",
     ]
