@@ -7,6 +7,7 @@ require 'web_helpers'
 require 'setup_test_database'
 require 'user'
 require 'database_helpers'
+require 'bcrypt'
 
 ENV['ENVIRONMENT'] = 'test'
 

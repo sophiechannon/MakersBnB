@@ -7,7 +7,11 @@ describe User do
       expect(user.last_name).to eq "Banks"
       expect(user.email).to eq "iain@test.com"
       expect(user.id).to eq persisted_data['id']
-      
+    end
+
+    it "hashs the password using BCrypt" do
+      expect(BCrypt::Password).to receive(:create).with("password123")
+      User.create(first_name: "Iain", last_name: "Banks", email: "iain@test.com", password: "password123")
     end
   end
 end
