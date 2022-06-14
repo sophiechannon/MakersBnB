@@ -15,13 +15,14 @@ describe Property do
       result = Property.all
       expect(result.length).to eq 2
       expect(result.first).to be_a Property
+      expect(result.first.name).to eq "A haunted house by the sea"
+      expect(result.first.description).to eq "It is an old haunted house, you will definitely love the fear. Enjoy the night!"
     end
   end
 
   describe ".create" do
     it "creates a new property" do
       property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear")
-
       expect(Property.all.first.name).to eq "A haunted house by the sea"
       expect(Property.all.first.description).to eq "It is an old haunted house, you will definitely love the fear"
     end

@@ -21,6 +21,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post "/spaces/new" do
+    Property.create(name: params[:property_name], description: params[:description])
     redirect ("/spaces")
   end
 

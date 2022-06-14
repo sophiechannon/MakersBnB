@@ -4,6 +4,7 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require_relative './setup_test_database'
+require_relative './web_helper'
 
 ENV['ENVIRONMENT'] = 'test'
 
