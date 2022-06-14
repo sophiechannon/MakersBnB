@@ -11,7 +11,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get "/spaces" do
-    "Book a space\nProperty 1"
+    erb :'spaces/spaces'
   end
 
   run! if app_file == $0
