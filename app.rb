@@ -1,5 +1,6 @@
 require "sinatra/base"
 require "sinatra/reloader"
+require "./lib/property"
 
 class Makersbnb < Sinatra::Base
   configure :development do
@@ -11,11 +12,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get "/spaces" do
-    @properties = [
-      "Property 1",
-      "Property 2",
-      "Property 3",
-    ]
+    @properties = Property.all
     erb :'spaces/spaces'
   end
 
