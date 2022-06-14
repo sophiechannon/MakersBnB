@@ -29,7 +29,8 @@ class Property
       @connection = PG.connect(dbname: "makersbnb")
     end
     result = @connection.exec_params(
-      "INSERT INTO properties (property_name, property_description) VALUES($1, $2) RETURNING property_name, property_description", [name, description]
+      "INSERT INTO properties (property_name, property_description) VALUES($1, $2) RETURNING property_name, property_description",
+      [name, description]
     )
     Property.new(name: result[0]['property_name'], description: result[0]['property_description'])
   end
