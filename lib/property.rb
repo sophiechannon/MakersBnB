@@ -1,6 +1,14 @@
 require 'pg'
 
 class Property
+  
+  attr_reader :name, :description
+
+  def initialize(name:,description:)
+    @name = name
+    @description = description
+  end
+
   def self.all
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makersbnb_test')
@@ -11,7 +19,7 @@ class Property
       "SELECT * from properties", []
     )
     result.map{ |entry|
-      entry['property_name']
+      Property.new(name: entry['property_name'], description: entry['property_description'])
     }
   end
 end
