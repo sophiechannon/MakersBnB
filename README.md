@@ -90,6 +90,7 @@ USER
 | Can accept or reject a booking | |
 | Can register | |
 | Can log in & out | |
+| Can find self | |
 
 PROPERTY
 | responsibility | collaborators |
