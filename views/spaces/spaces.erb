@@ -1,0 +1,10 @@
+<h2>Book a space</h2>
+
+<ul>
+  <% @properties.each do |property| %>
+    <li><%= property.name %><br>
+    <%= property.description %><br>
+    £<%= property.price %>
+    </li>
+  <% end %>
+</ul>
