@@ -19,5 +19,11 @@ class Makersbnb < Sinatra::Base
     'Book a space'
   end
 
+  get '/sessions/new' do
+    erb :log_in
+  end
+
+  
+
   run! if app_file == $0  
 end
