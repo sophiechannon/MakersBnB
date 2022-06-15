@@ -35,7 +35,7 @@ class Makersbnb < Sinatra::Base
     else
       flash[:notice] = "Please check your email or password."
      redirect ('/sessions/new')
-   end
+    end
     session[:user_id] = user.id
   end
 
@@ -46,6 +46,7 @@ class Makersbnb < Sinatra::Base
 
   get "/spaces" do
     @properties = Property.all
+    @user = User.find(id: session[:user_id]).email
     erb :'spaces/spaces'
   end
 
@@ -54,7 +55,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post "/spaces/new" do
-    Property.create(name: params[:property_name], description: params[:description], price: params[:price].to_i)
+    Property.create(name: params[:property_name], description: params[:description], price: params[:price].to_i, user_id: session[:user_id])
     redirect ("/spaces")
   end
 

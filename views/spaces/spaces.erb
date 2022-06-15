@@ -1,10 +1,17 @@
 <h2>Book a space</h2>
 
+<form action="/spaces/new">
+  <input type="submit" value="List a Space" id="List a Space" />
+</form>
+
+
+
 <ul>
   <% @properties.each do |property| %>
     <li><%= property.name %><br>
     <%= property.description %><br>
     £<%= property.price %>
+    <%= User.find(id: property.user_id).email%>
     </li>
   <% end %>
 </ul>
