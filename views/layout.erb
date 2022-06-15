@@ -1,0 +1,22 @@
+<html>
+
+  <body>
+  <header>
+  
+  <% if session[:user_id] != nil %>
+
+  <a href="/spaces"> Spaces </a> | Requests | <a href="/logout" > Sign out </a>
+
+  <% else %>
+  
+  About | <a href="/sessions/new"> Login </a>
+
+  <% end %>
+
+  </header>
+
+  <%= yield %>
+
+  </body>
+
+</html>
