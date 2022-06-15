@@ -1,5 +1,5 @@
 def list_a_property(name:, description:, price:)
-  visit("/spaces/new")
+  click_button "List a Space"
   fill_in("property_name", with: name)
   fill_in("description", with: description)
   fill_in("price", with: price)

@@ -1,20 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/joe/Projects/Ruby/MakersBnB/spec/features/listing_a_property_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
       "/Users/joe/Projects/Ruby/MakersBnB/spec/features/user_log_in_spec.rb": {
         "lines": [
           1,
@@ -58,13 +44,16 @@
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -79,8 +68,14 @@
           1,
           1,
           null,
+          1,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           null,
@@ -89,14 +84,8 @@
           1,
           1,
           1,
-          1,
-          null,
-          null,
           null,
           1,
-          1,
-          1,
-          null,
           1,
           1,
           1,
@@ -155,6 +144,6 @@
         ]
       }
     },
-    "timestamp": 1655289293
+    "timestamp": 1655291301
   }
 }
