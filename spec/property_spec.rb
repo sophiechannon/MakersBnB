@@ -29,6 +29,8 @@ describe Property do
       expect(Property.all.first.description).to eq "It is an old haunted house, you will definitely love the fear."
       expect(Property.all.first.price).to eq "25"
       expect(Property.all.first.user_id).to eq user.id
+      expect(Property.all.first.availability_start).to eq "2022-07-20"
+      expect(Property.all.first.availability_end).to eq "2022-07-30"
     end
   end
 end
