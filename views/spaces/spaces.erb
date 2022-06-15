@@ -11,6 +11,8 @@
     <li><%= property.name %><br>
     <%= property.description %><br>
     £<%= property.price %>
+    availability from:<%= property.availability_start%>
+    until:<%= property.availability_end%>
     <%= User.find(id: property.user_id).email%>
     </li>
   <% end %>
