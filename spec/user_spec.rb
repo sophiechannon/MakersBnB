@@ -32,4 +32,14 @@ describe User do
       expect(User.authenticate(email: 'test@gmail.com', password: 'wrong_password')).to be_nil
     end
   end
+
+
+  describe '.find' do
+    it 'finds the user with the user id' do
+      user = User.create(first_name: "Sophie", last_name: "Gilder", email: "test@gmail.com", password: "password123")
+      result = User.find(id: user.id)
+      expect(result.first_name).to eq "Sophie"
+      expect(result.email).to eq "test@gmail.com"
+    end
+  end
 end
