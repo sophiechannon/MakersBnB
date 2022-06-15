@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/listing_a_property_spec.rb": {
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/listing_a_property_spec.rb": {
         "lines": [
           1,
           1,
@@ -15,7 +15,7 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_log_in_spec.rb": {
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/user_log_in_spec.rb": {
         "lines": [
           1,
           1,
@@ -42,41 +42,9 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_logout_spec.rb": {
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/user_logout_spec.rb": {
         "lines": [
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_registration_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/viewing_properties_spec.rb": {
-        "lines": [
-          1,
-          null,
           1,
           1,
           1,
@@ -93,7 +61,39 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/property_spec.rb": {
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/user_registration_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/features/viewing_properties_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/property_spec.rb": {
         "lines": [
           1,
           null,
@@ -129,7 +129,7 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/user_spec.rb": {
+      "/Users/michaelcychan/Project/MakersGroupProjects/MakersBnB/spec/user_spec.rb": {
         "lines": [
           1,
           1,
@@ -179,6 +179,6 @@
         ]
       }
     },
-    "timestamp": 1655288742
+    "timestamp": 1655289793
   }
 }

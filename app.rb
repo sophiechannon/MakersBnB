@@ -36,7 +36,11 @@ class Makersbnb < Sinatra::Base
      redirect ('/sessions/new')
    end
     session[:user_id] = user.id
-  
+  end
+
+  get '/logout' do
+    session[:user_id] = nil
+    redirect '/'
   end
 
   get "/spaces" do

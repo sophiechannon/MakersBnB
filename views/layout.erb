@@ -2,14 +2,20 @@
 
   <body>
   <header>
-  if 
-    
+  
+  <% if session[:user_id] != nil %>
 
-  else
+  <a href="/spaces"> Spaces </a> | Requests | <a href="/logout"> Sign out </a>
+
+  <% else %>
+  
+  About | <a href="/sessions/new"> Login </a>
+
+  <% end %>
 
   </header>
 
-  <%=yield %>
+  <%= yield %>
 
   </body>
 
