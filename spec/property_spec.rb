@@ -42,8 +42,8 @@ describe Property do
       expect(result.price).to eq "25"
     end
 
-    it 'returns nil if no user is found' do
-      expect(User.find(id: nil)).to eq nil
+    it 'returns nil if no property is found' do
+      expect(Property.find(id: nil)).to eq nil
     end
   end
 end
