@@ -1,23 +1,41 @@
 require "sinatra/base"
 require "sinatra/reloader"
+require "sinatra/flash"
 require "./lib/property"
-require_relative './lib/user.rb'
+require "./lib/user.rb"
 
 class Makersbnb < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
 
+  register Sinatra::Flash
   enable :sessions
 
-  get '/' do
+  get "/" do
     erb :index
   end
 
-  post '/user' do
+  post "/user" do
     user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
     session[:user_id] = user.id
-    'Book a space'
+    redirect "/spaces"
+  end
+
+  get "/sessions/new" do
+    erb :log_in
+  end
+
+  post "/sessions/new" do
+    user = User.authenticate(email: params[:email], password: params[:password])
+    if user
+      session[:user_id] = user.id
+      redirect "/spaces"
+    else
+      flash[:notice] = "Please check your email or password."
+      redirect ("/sessions/new")
+    end
+    session[:user_id] = user.id
   end
 
   get "/spaces" do

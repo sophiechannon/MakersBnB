@@ -15,6 +15,33 @@
           null
         ]
       },
+      "/Users/joe/Projects/Ruby/MakersBnB/spec/features/user_log_in_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/joe/Projects/Ruby/MakersBnB/spec/features/user_registration_spec.rb": {
         "lines": [
           1,
@@ -101,10 +128,28 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1655222488
+    "timestamp": 1655286194
   }
 }
