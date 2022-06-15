@@ -41,5 +41,9 @@ describe User do
       expect(result.first_name).to eq "Sophie"
       expect(result.email).to eq "test@gmail.com"
     end
+
+    it 'returns nil if no user is found' do
+      expect(User.find(id: nil)).to eq nil
+    end
   end
 end

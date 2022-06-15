@@ -44,6 +44,7 @@ class User
   end
 
   def self.find(id:)
+    return nil if id == nil
     if ENV['ENVIRONMENT'] == 'test'
       @connection = PG.connect(dbname: 'makersbnb_test')
     else
