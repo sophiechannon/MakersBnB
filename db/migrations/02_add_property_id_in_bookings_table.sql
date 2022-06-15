@@ -1,0 +1,1 @@
+ALTER TABLE bookings ADD property_id INTEGER REFERENCES properties (id);
