@@ -1,5 +1,3 @@
-require "./lib/property"
-
 describe Property do
   describe ".all" do
     it "shows all spaces" do
