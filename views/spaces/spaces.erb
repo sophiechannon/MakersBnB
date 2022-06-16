@@ -9,21 +9,19 @@
 </div>
 
 <div class="property-container">
-  <ul>
     <% @properties.each do |property| %>
-      <div class="property">
-        <li class="listing">
-        <%= property.name %><br>
-        <%= property.description %><br>
-        £<%= property.price %>
-        <%= User.find(id: property.user_id).email %>
-        availability from:<%= property.availability_start%>
-        until:<%= property.availability_end%>
-        <form action="/spaces/<%= property.id %>">
-          <input type="submit" value="Request to book">
-        </form>
-        </li>
+      <div class="listing">
+        <a href="/spaces/<%= property.id %>" id="listing">
+          <div class="listing-content">
+            <%= property.name %><br>
+            <%= property.description %><br>
+            £<%= property.price %>
+            <%= User.find(id: property.user_id).email %>
+            availability from:<%= property.availability_start%>
+            until:<%= property.availability_end%>
+          </div>
+        </a>
       </div>
+    </a>
     <% end %>
-  </ul>
 </div>

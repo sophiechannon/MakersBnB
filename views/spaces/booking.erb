@@ -1,6 +1,10 @@
-<form action="/spaces/<%=@property.id%>/book" method="post">
-  <label for="date">Booking date:</label>
-  <input type="date" id="date" name="date"
-       min="<%= @property.availability_start %>" max="<%= @property.availability_end %>">
-  <input type="submit" value="Request">
-</form>
+<div class="centered-container"><h2><%=@property.name%></h2></div>
+<div class="centered-container">
+  <form action="/spaces/<%=@property.id%>/book" method="post">
+    <div class="user-input">
+      <label for="date">Booking date </label>
+      <input type="date" id="date" name="date"
+        min="<%= @property.availability_start %>" max="<%= @property.availability_end %>">
+    <input type="submit" value="Request">
+  </form>
+</div>
