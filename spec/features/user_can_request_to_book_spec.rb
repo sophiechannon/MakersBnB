@@ -5,8 +5,9 @@ feature "booking a space" do
       price: "50", user_id: user.id, availability_start: "2022-05-10", availability_end: "2022-10-20")
     user_log_in
     first('.listing').click_button 'Request to book'
-    fill_in :date, with: '17/06/2022'
+    fill_in :date, with: '2022-07-01'
     click_button "Request"
-    expect(page).to have_content "Booking request has been submitted"
-  end    
+    save_and_open_page
+    expect(page).to have_content 'Your request to book "A house in the moutains" has been submitted'
+  end
 end

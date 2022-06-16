@@ -67,7 +67,7 @@ class Makersbnb < Sinatra::Base
 
   post "/spaces/:id/book" do
     Booking.create(user_id: session[:user_id], date: params['date'], property_id: params['id'])
-    "Booking request has been submitted"
+    erb :'/spaces/request_submission'
   end
 
   run! if app_file == $0
