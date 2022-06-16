@@ -33,4 +33,20 @@ describe Property do
       expect(Property.all.first.availability_end).to eq "2022-07-30"
     end
   end
+
+  describe '.find' do
+    it 'finds the property with the property id' do
+      user = User.create(first_name: "Iain", last_name: "Banks", email: "iain@test.com", password: "password123")
+      property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear.",
+        price: "25", user_id: user.id)
+      result = Property.find(id: property.id)
+      expect(result.name).to eq "A haunted house by the sea"
+      expect(result.description).to eq "It is an old haunted house, you will definitely love the fear."
+      expect(result.price).to eq "25"
+    end
+
+    it 'returns nil if no property is found' do
+      expect(Property.find(id: nil)).to eq nil
+    end
+  end
 end

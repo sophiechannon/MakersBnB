@@ -59,5 +59,14 @@ class Makersbnb < Sinatra::Base
     redirect ("/spaces")
   end
 
+  get "/spaces/:id" do
+    @property = Property.find(id: params[:id])
+    erb :'/spaces/booking'
+  end
+
+  post "/spaces/:id/book" do
+    "Booking request has been submitted"
+  end
+
   run! if app_file == $0
 end
