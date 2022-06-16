@@ -4,16 +4,18 @@
   <input type="submit" value="List a Space" id="List a Space" />
 </form>
 
-
-
 <ul>
   <% @properties.each do |property| %>
-    <li><%= property.name %><br>
+    <li class="listing">
+    <%= property.name %><br>
     <%= property.description %><br>
     £<%= property.price %>
+    <%= User.find(id: property.user_id).email %>
     availability from:<%= property.availability_start%>
     until:<%= property.availability_end%>
-    <%= User.find(id: property.user_id).email%>
+    <form action="/spaces/<%= property.id %>">
+      <input type="submit" value="Request to book">
+    </form>
     </li>
   <% end %>
 </ul>

@@ -95,13 +95,26 @@ USER
 PROPERTY
 | responsibility | collaborators |
 |----------------|---------------|
-| can show all properties | |
+| can show all properties | User |
 | knows name | |
 | knows description | |
 | knows price | |
 | knows availability start date | |
 | knows availability end date | |
 | knows dates booked | |
+
+BOOKINGS
+| responsibility | collaborators |
+|----------------|---------------|
+| can show all bookings | User |
+| can find specific bookings | Properties |
+| can add a new booking | |
+| knows when properties aren't available (i.e. are booked)| |
+| knows who booked a property | |
+| knows which property has been booked | |
+| knows if property bookings have been accepted | |
+| knows if property bookings have been rejected | |
+| knows if property bookings have been pending | |
 
 **Database design**
 
@@ -116,5 +129,5 @@ PROPERTIES
 |----|------------|-----------|-------|----------|----|-----|
 
 BOOKINGS
-| id | fk property_id | fk user_id | date | status |
+| id | fk property_id | fk booker_id | date | status |
 |---|---|---|---|---|
