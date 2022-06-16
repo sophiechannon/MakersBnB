@@ -1,6 +1,6 @@
 <form action="/spaces/<%=@property.id%>/book" method="post">
   <label for="date">Booking date:</label>
   <input type="date" id="date" name="date"
-       min="2022-06-10" max="2022-08-15">
+       min="<%= @property.availability_start %>" max="<%= @property.availability_end %>">
   <input type="submit" value="Request">
 </form>

@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'sinatra/flash'
 require './lib/property'
 require './lib/user.rb'
+require './lib/booking.rb'
 
 class Makersbnb < Sinatra::Base
   configure :development do
@@ -65,6 +66,7 @@ class Makersbnb < Sinatra::Base
   end
 
   post "/spaces/:id/book" do
+    Booking.create(user_id: session[:user_id], date: params['date'], property_id: params['id'])
     "Booking request has been submitted"
   end
 
