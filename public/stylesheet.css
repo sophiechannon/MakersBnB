@@ -93,3 +93,11 @@ input[type="password"] {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
   }
+
+  input[type="email"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }

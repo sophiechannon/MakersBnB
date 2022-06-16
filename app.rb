@@ -24,7 +24,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/sessions/new' do
-    erb :log_in
+    erb :'sessions/new'
   end
 
   post '/sessions/new' do

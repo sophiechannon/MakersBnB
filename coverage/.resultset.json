@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_can_request_to_book_spec.rb": {
+      "/Users/sophiegilder/Makers/makersbnb/spec/features/user_can_request_to_book_spec.rb": {
         "lines": [
           1,
           1,
@@ -19,49 +19,18 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_log_in_spec.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_logout_spec.rb": {
+      "/Users/sophiegilder/Makers/makersbnb/spec/features/user_log_in_spec.rb": {
         "lines": [
           1,
           1,
           1,
           1,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           null,
-          null
-        ]
-      },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/user_registration_spec.rb": {
-        "lines": [
+          null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -72,15 +41,47 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/features/viewing_properties_spec.rb": {
+      "/Users/sophiegilder/Makers/makersbnb/spec/features/user_logout_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sophiegilder/Makers/makersbnb/spec/features/user_registration_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sophiegilder/Makers/makersbnb/spec/features/viewing_properties_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           0,
           0,
@@ -96,7 +97,7 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/property_spec.rb": {
+      "/Users/sophiegilder/Makers/makersbnb/spec/property_spec.rb": {
         "lines": [
           1,
           null,
@@ -152,7 +153,7 @@
           null
         ]
       },
-      "/Users/ephronagyeman-opoku/MakersBnb/MakersBnB/spec/user_spec.rb": {
+      "/Users/sophiegilder/Makers/makersbnb/spec/user_spec.rb": {
         "lines": [
           1,
           1,
@@ -206,6 +207,6 @@
         ]
       }
     },
-    "timestamp": 1655389719
+    "timestamp": 1655390595
   }
 }
