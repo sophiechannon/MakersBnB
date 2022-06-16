@@ -4,6 +4,8 @@ require "sinatra/flash"
 require "./lib/property"
 require "./lib/user.rb"
 require "./lib/booking.rb"
+require "date"
+
 
 class Makersbnb < Sinatra::Base
   configure :development do
@@ -56,8 +58,15 @@ class Makersbnb < Sinatra::Base
   end
 
   post "/spaces/new" do
-    Property.create(name: params[:property_name], description: params[:description], price: params[:price].to_i, user_id: session[:user_id], availability_start: params[:availability_start], availability_end: params[:availability_end])
-    redirect ("/spaces")
+    @start_date = Date.parse(params[:availability_start])
+    @end_date = Date.parse(params[:availability_end])
+    if @start_date < @end_date 
+      Property.create(name: params[:property_name], description: params[:description], price: params[:price].to_i, user_id: session[:user_id], availability_start: params[:availability_start], availability_end: params[:availability_end])
+      redirect "/spaces"
+    else
+      flash[:notice] = "Date is before start date"
+      redirect ("/spaces/new") 
+    end
   end
 
   get "/spaces/:id" do
