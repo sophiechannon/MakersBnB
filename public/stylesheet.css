@@ -1,0 +1,31 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40;
+  color: #004D40;
+}
+
+body {
+    background-color: #FFFEFA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16;
+    color: #000000;
+    
+}
+
+.heading {
+    position: relative;
+    display: inline-block;
+}
+
+.navigation {
+    position: relative;
+    display: inline-block;
+    float: right;
+    padding-top: 50;    
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    
+}
