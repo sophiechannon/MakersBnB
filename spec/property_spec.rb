@@ -38,7 +38,7 @@ describe Property do
     it 'finds the property with the property id' do
       user = User.create(first_name: "Iain", last_name: "Banks", email: "iain@test.com", password: "password123")
       property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear.",
-        price: "25", user_id: user.id)
+        price: "25", user_id: user.id, availability_start: "2022-07-20", availability_end: "2022-07-30")
       result = Property.find(id: property.id)
       expect(result.name).to eq "A haunted house by the sea"
       expect(result.description).to eq "It is an old haunted house, you will definitely love the fear."
