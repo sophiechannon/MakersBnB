@@ -11,6 +11,8 @@
     <%= property.description %><br>
     £<%= property.price %>
     <%= User.find(id: property.user_id).email %>
+    availability from:<%= property.availability_start%>
+    until:<%= property.availability_end%>
     <form action="/spaces/<%= property.id %>">
       <input type="submit" value="Request to book">
     </form>

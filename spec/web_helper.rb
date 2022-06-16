@@ -1,8 +1,10 @@
-def list_a_property(name:, description:, price:)
+def list_a_property(name:, description:, price:, availability_start:, availability_end:)
   click_button "List a Space"
   fill_in("property_name", with: name)
   fill_in("description", with: description)
   fill_in("price", with: price)
+  fill_in("availability_start", with: availability_start)
+  fill_in("availability_end", with: availability_end)
   click_button "List my Space"
 end
 
