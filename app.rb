@@ -1,9 +1,9 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
-require 'sinatra/flash'
-require './lib/property'
-require './lib/user.rb'
-require './lib/booking.rb'
+require "sinatra/base"
+require "sinatra/reloader"
+require "sinatra/flash"
+require "./lib/property"
+require "./lib/user.rb"
+require "./lib/booking.rb"
 
 class Makersbnb < Sinatra::Base
   configure :development do
@@ -13,36 +13,36 @@ class Makersbnb < Sinatra::Base
   register Sinatra::Flash
   enable :sessions
 
-  get '/' do
+  get "/" do
     @user = User.find(id: session[:user_id])
     erb :index
   end
 
-  post '/user' do
+  post "/user" do
     user = User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
     session[:user_id] = user.id
-    redirect '/spaces'
+    redirect "/spaces"
   end
 
-  get '/sessions/new' do
+  get "/sessions/new" do
     erb :log_in
   end
 
-  post '/sessions/new' do
+  post "/sessions/new" do
     user = User.authenticate(email: params[:email], password: params[:password])
     if user
       session[:user_id] = user.id
-      redirect '/spaces'
+      redirect "/spaces"
     else
       flash[:notice] = "Please check your email or password."
-     redirect ('/sessions/new')
+      redirect ("/sessions/new")
     end
     session[:user_id] = user.id
   end
 
-  get '/logout' do
+  get "/logout" do
     session.clear
-    redirect '/'
+    redirect "/"
   end
 
   get "/spaces" do
@@ -66,7 +66,8 @@ class Makersbnb < Sinatra::Base
   end
 
   post "/spaces/:id/book" do
-    Booking.create(user_id: session[:user_id], date: params['date'], property_id: params['id'])
+    @booking = Booking.create(user_id: session[:user_id], date: params["date"], property_id: params["id"])
+    @property = Property.find(id: @booking.property_id)
     erb :'/spaces/request_submission'
   end
 
