@@ -24,8 +24,8 @@ class Makersbnb < Sinatra::Base
     redirect "/spaces"
   end
 
-  get "/sessions/new" do
-    erb :log_in
+  get '/sessions/new' do
+    erb :'sessions/new'
   end
 
   post "/sessions/new" do
