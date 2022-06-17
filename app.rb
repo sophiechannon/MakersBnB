@@ -81,7 +81,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get "/view-requests" do
-    @sql_result = DatabaseConnection.query("SELECT * FROM bookings INNER JOIN properties ON bookings.property_id = properties.id WHERE $1 = properties.user_id",
+    @sql_result = DatabaseConnection.query("SELECT bookings.id, bookings.booker_id, bookings.booking_date, bookings.booking_status, bookings.property_id, properties.property_name, users.first_name, users.last_name, users.email_address FROM bookings INNER JOIN properties ON bookings.property_id = properties.id INNER JOIN users ON bookings.booker_id = users.id WHERE properties.user_id = $1",
     [session[:user_id]])
     # a Booking class object is not enough to hold all the data returns. need a new class? Will do in later refactoring if have time.
     erb :'/requests/view'
