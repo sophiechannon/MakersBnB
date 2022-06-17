@@ -1,13 +1,27 @@
-Requests I've received
 
-<div>
-    <% @sql_result.each do |booking| %>
-        <div>
-            Property: <%= booking['property_name'] %><br>
-            Status: <%= booking['booking_status'] %><br>
-            Date requested: <%= booking['booking_date'] %><br>
-            Customer: <%= booking['email_address'] %><br>
+
+<div class= left-side-container>
+    
+        <div class="right-side-container">
+            Requests I've received
+            <% @sql_result.each do |booking| %>
+
+            <div class="recieved">
+                Property: <%= booking['property_name'] %><br>
+                Status: <%= booking['booking_status'] %><br>
+                Date requested: <%= booking['booking_date'] %><br>
+                Customer: <%= booking['email_address'] %><br>
+            </div>
         </div>
     <% end %>
 
+    <div class="right-side-container">
+            Requests I've made
+            <div class="booked">
+                Property: <br>
+                Status: <br>
+                Date requested: <br>
+                Customer: <br>
+            </div>
+      </div>
 </div>

@@ -16,7 +16,7 @@
         </a>
         <div class="navigation">
           <% if session[:user_id] != nil %>
-            <a href="/spaces"> Spaces </a> | Requests | <a href="/logout" > Sign out </a>
+            <a href="/spaces"> Spaces </a> | <a href="/view-requests"> Requests </a> | <a href="/logout" > Sign out </a>
           <% else %>
             About | <a href="/sessions/new"> Log in </a>
           <% end %>

@@ -135,3 +135,31 @@ input[type="password"] {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
   }
+
+  .left-side-container {
+    width: 50% 
+  }
+
+  .right-side-container{
+    float: left; 
+    width: 50%;
+
+  }
+
+  .recieved {
+    margin: 10px auto;
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #004D40 
+  }
+
+  .booked {
+    margin: 10px auto;
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #004D40 
+  }
