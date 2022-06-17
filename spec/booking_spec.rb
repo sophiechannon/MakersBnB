@@ -12,4 +12,28 @@ describe Booking do
       expect(booking.booking_date).to eq "2022-06-30"
     end
   end
+
+  describe ".update" do
+    it "should confirms a booking" do
+      user = User.create(first_name: "Iain", last_name: "Banks", email: "iain@test.com", password: "password123")
+      property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear.",
+                                 price: "25", user_id: user.id, availability_start: "2022-06-20", availability_end: "2022-06-30")
+
+      booking = Booking.create(user_id: user.id, date: "2022-06-30", property_id: property.id)
+      expect(booking.status).to eq "PENDING"
+      booking2 = Booking.update(action: "Confirm", id: booking.id)
+      expect(booking2.status).to eq "CONFIRMED"
+    end
+
+    it "should rejects a booking" do
+      user = User.create(first_name: "Iain", last_name: "Banks", email: "iain@test.com", password: "password123")
+      property = Property.create(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear.",
+                                 price: "25", user_id: user.id, availability_start: "2022-06-20", availability_end: "2022-06-30")
+
+      booking = Booking.create(user_id: user.id, date: "2022-06-30", property_id: property.id)
+      expect(booking.status).to eq "PENDING"
+      booking2 = Booking.update(action: "Reject", id: booking.id)
+      expect(booking2.status).to eq "REJECTED"
+    end
+  end
 end
