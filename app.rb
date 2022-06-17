@@ -87,5 +87,10 @@ class Makersbnb < Sinatra::Base
     erb :'/requests/view'
   end
 
+  post '/view-requests/:id' do
+    Booking.update(action: params[:action], id: params[:id])
+    redirect ('view-requests')
+  end
+
   run! if app_file == $0
 end

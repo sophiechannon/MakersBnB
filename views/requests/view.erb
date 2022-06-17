@@ -11,6 +11,12 @@
                         Status: <%= booking['booking_status'] %><br>
                         Date requested: <%= booking['booking_date'] %><br>
                         Customer: <%= booking['email_address'] %><br>
+                        <form action='/view-requests/<%= booking['id'] %>' method="post">
+                            <input type = "hidden" name="_method" value="PATCH">
+                            <input type="submit" name="action" value="Reject">
+                            <input type="submit" name="action" value="Confirm">
+                        </form>
+
                     </div>
                     <% end %>
                 <% else %>
