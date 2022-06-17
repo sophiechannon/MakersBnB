@@ -15,7 +15,7 @@ def user_sign_up
   fill_in :password, with: "password123"
   click_button "Sign up"
 end
- 
+
 def user_log_in
   User.create(first_name: "Ian", last_name: "Banks", email: "iain@test.com", password: "password123")
   visit "/"

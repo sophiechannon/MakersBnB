@@ -1,6 +1,5 @@
 require "pg"
 
-
 class Booking
   attr_reader :id, :booker_id, :booking_date, :status, :property_id
 
