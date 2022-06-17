@@ -8,13 +8,13 @@ feature "viewing properties" do
 
     expect(page).to have_content "Book a space"
     expect(page).to have_content "A haunted house by the sea"
-    expect(page).to have_content "It is an old haunted house, you will definitely love the fear. Enjoy the night!"
+    expect(page).to have_content "It is an old haunted house, you will definitely love the fear..."
     expect(page).to have_content "£50"
     expect(page).to have_content "iain@test.com"
     expect(page).to have_content "from:2022-06-14"
     expect(page).to have_content "until:2022-06-30"
     expect(page).to have_content "A house in the moutains"
-    expect(page).to have_content "A big house in the mountains. You will enjoy the views and the songs of the birds."
+    expect(page).to have_content "A big house in the mountains. You will enjoy the views and th..."
     expect(page).to have_content "£100"
   end
 
@@ -23,5 +23,12 @@ feature "viewing properties" do
     list_a_property(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear. Enjoy the night!", price: "50", availability_start: "2022-06-14", availability_end: "2022-06-12")
     expect(current_path).to eq "/spaces/new"
     expect(page).to have_content "End date is before start date"
+  end
+
+  scenario "A long description is entered, should display a shortened description with ..." do
+    user_log_in
+    list_a_property(name: "A haunted house by the sea", description: "It is an old haunted house, you will definitely love the fear " * 50, price: "50", availability_start: "2022-06-14", availability_end: "2022-06-15")
+    expect(page).to have_content ("It is an old haunted house, you will definitely love the fear...")
+    expect(page).not_to have_content ("It is an old haunted house, you will definitely love the fear. Enjoy the night!" * 50)
   end
 end
