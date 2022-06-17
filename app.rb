@@ -64,7 +64,7 @@ class Makersbnb < Sinatra::Base
       Property.create(name: params[:property_name], description: params[:description], price: params[:price].to_i, user_id: session[:user_id], availability_start: params[:availability_start], availability_end: params[:availability_end])
       redirect "/spaces"
     else
-      flash[:notice] = "Date is before start date"
+      flash[:notice] = "End date is before start date"
       redirect ("/spaces/new") 
     end
   end
