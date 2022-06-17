@@ -1,6 +1,5 @@
 require "pg"
 
-
 class Property
 
   attr_reader :name, :description, :price, :user_id, :availability_start, :availability_end, :id

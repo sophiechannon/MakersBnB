@@ -53,8 +53,8 @@ class Makersbnb < Sinatra::Base
     @user = User.find(id: session[:user_id]).email
     erb :'spaces/spaces'
   end
-  get "/spaces/new" do
 
+  get "/spaces/new" do
     erb :'/spaces/new'
   end
 
@@ -84,7 +84,7 @@ class Makersbnb < Sinatra::Base
   get "/view-requests" do
     database_connection
     @bookings = @connection.exec_params("SELECT * FROM bookings INNER JOIN properties ON bookings.property_id = properties.id WHERE $1 = properties.user_id",
-      [session[:user_id]])
+    [session[:user_id]])
     puts "the SQL passed!"
     erb :'/requests/view'
   end
