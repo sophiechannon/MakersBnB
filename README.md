@@ -1,6 +1,23 @@
 # MakersBnB
 
-We would like a web application that allows users to list spaces they have available, and to hire spaces for the night.
+A web application that allows users to list spaces they have available, and to hire spaces for the night.
+
+## Database Setup
+1) Open Terminal, open Postgresql using `psql` command.
+
+2) To create the database and database tables, use 01_create_databases_and_tables.sql in the terminal to create the production
+and test databases for Makersbnb.
+
+
+## How to run
+To run the local server, in Terminal run `rackup` in the directory for the project.
+Open a web browser, going to the localhost and port designated by *Rackup* (usually this will be `localhost:9292`)
+Navigate the website by signing up if it's your first time, or logging in. 
+When finished, `CTRL + C` in the terminal with *Rackup* to stop the local server
+
+## Running tests
+Tests can be run using Rspec via the terminal in the directory Makersbnb is located in
+` rspec`
 
 **Headline specifications**
 - Any signed-up user can list a new space.
