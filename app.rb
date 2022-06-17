@@ -85,7 +85,7 @@ class Makersbnb < Sinatra::Base
     database_connection
     @bookings = @connection.exec_params("SELECT * FROM bookings INNER JOIN properties ON bookings.property_id = properties.id WHERE $1 = properties.user_id",
     [session[:user_id]])
-    puts "the SQL passed!"
+    # a Booking class object is not enough to hold all the data returns. need a new class? Will do in later refactoring if have time.
     erb :'/requests/view'
   end
 
