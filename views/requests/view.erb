@@ -6,10 +6,12 @@
                 <div class="recieved">
                 <% if @sql_result.cmdtuples > 0 %>
                     <% @sql_result.each do |booking| %>
+                    <div class="listing-content">
                         Property: <%= booking['property_name'] %><br>
                         Status: <%= booking['booking_status'] %><br>
                         Date requested: <%= booking['booking_date'] %><br>
                         Customer: <%= booking['email_address'] %><br>
+                    </div>
                     <% end %>
                 <% else %>
                     No requests so far.<br>
