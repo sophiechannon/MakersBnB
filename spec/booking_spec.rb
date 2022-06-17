@@ -1,5 +1,3 @@
-require "./lib/booking"
-
 describe Booking do
   describe ".create" do
     it "should create a pending booking" do
