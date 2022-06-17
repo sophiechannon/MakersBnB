@@ -1,5 +1,3 @@
-require "pg"
-
 class Booking
   attr_reader :id, :booker_id, :booking_date, :status, :property_id
 
@@ -12,8 +10,7 @@ class Booking
   end
 
   def self.create(user_id:, date:, property_id:)
-    database_connection
-    result = @connection.exec_params(
+    result = DatabaseConnection.query(
       "INSERT INTO bookings (booker_id, booking_date, booking_status, property_id) VALUES($1, $2, $3, $4) RETURNING id, booker_id, booking_date, booking_status, property_id",
       [user_id, date, "PENDING", property_id]
     )
