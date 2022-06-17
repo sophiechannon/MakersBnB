@@ -1,0 +1,21 @@
+<div class="centered-container">
+  <h2>Log into MakersBnB</h2>
+</div>
+<div class="user-info-box">
+  <%= flash[:notice] %>
+  <form action="/sessions/new" method="post">
+    <div class="user-input">
+      <label for="Email">Email</label>  
+    </div>
+    <div class="user-input">
+        <input type="email" name="email">
+    </div>
+    <div class="user-input">  
+      <label for="Password">Password</label>
+    </div>
+    <div class="user-input">
+        <input type="password" name="password">
+    </div>
+      <input type="submit" value="Log in">
+  </form>
+</div>

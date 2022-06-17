@@ -1,21 +1,27 @@
-<h2>Book a space</h2>
+<div class="centered-container">
+  <h2>Book a space</h2>
+</div>
 
-<form action="/spaces/new">
-  <input type="submit" value="List a Space" id="List a Space" />
-</form>
+<div class="centered-container">
+  <form action="/spaces/new">
+    <input type="submit" value="List a Space" id="List a Space" />
+  </form>
+</div>
 
-<ul>
-  <% @properties.each do |property| %>
-    <li class="listing">
-    <%= property.name %><br>
-    <%= property.description %><br>
-    £<%= property.price %>
-    <%= User.find(id: property.user_id).email %>
-    availability from:<%= property.availability_start%>
-    until:<%= property.availability_end%>
-    <form action="/spaces/<%= property.id %>">
-      <input type="submit" value="Request to book">
-    </form>
-    </li>
-  <% end %>
-</ul>
+<div class="property-container">
+    <% @properties.each do |property| %>
+      <div class="listing">
+        <a href="/spaces/<%= property.id %>" id="listing">
+          <div class="listing-content">
+            <%= property.name %><br>
+            <%= property.description %><br>
+            £<%= property.price %>
+            <%= User.find(id: property.user_id).email %>
+            availability from:<%= property.availability_start%>
+            until:<%= property.availability_end%>
+          </div>
+        </a>
+      </div>
+    </a>
+    <% end %>
+</div>

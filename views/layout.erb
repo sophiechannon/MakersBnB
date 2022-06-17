@@ -1,21 +1,30 @@
 <html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  </head>
 
   <body>
-  <header>
-  
-  <% if session[:user_id] != nil %>
+    <header>
+      <div class="header-container">
+        <a href="/">
+          <div class="heading">
+            <h1>MakersBnB</h1>
+          </div>
+        </a>
+        <div class="navigation">
+          <% if session[:user_id] != nil %>
+            <a href="/spaces"> Spaces </a> | Requests | <a href="/logout" > Sign out </a>
+          <% else %>
+            About | <a href="/sessions/new"> Log in </a>
+          <% end %>
+        </div>
+      </div>
+    </header>
 
-  <a href="/spaces"> Space </a> | Requests | <a href="/logout" > Sign out </a>
-
-  <% else %>
-  
-  About | <a href="/sessions/new"> Login </a>
-
-  <% end %>
-
-  </header>
-
-  <%= yield %>
+    <%= yield %>
 
   </body>
 
