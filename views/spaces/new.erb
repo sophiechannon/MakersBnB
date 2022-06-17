@@ -1,13 +1,38 @@
-<form action="/spaces/new" method='post'>
-  <label for="property_name">Name:</label>
-  <input name="property_name" id="property_name" type="text" />
-  <label for="description">Description</label>
-  <input name="description" id="description" type="text" />
-  <label for="price">Price</label>
-  <input type='number' min='1' name="price" id="price" />
-  <label for="availability_start">Start date:</label>
-  <input type="date" id="availability_start" name="availability_start"/>
-  <label for="availability_end">End date:</label>
-  <input type="date" id="availability_end" name="availability_end" />
-  <input type="submit" value="List my Space">
-</form>
+<div class="centered-container">
+  <h2>List a Space</h2>
+</div>
+<div class="user-info-box">
+  <form action="/spaces/new" method='post'>
+    <div class="user-input">
+      <label for="property_name">Name</label>
+    </div>
+    <div class="user-input">
+      <input name="property_name" id="property_name" type="text" required/>
+    </div>
+    <div class="user-input">
+      <label for="description">Description</label>
+    </div>
+    <div class="user-input">
+      <input name="description" id="description" type="text" required/>
+    </div>
+    <div class="user-input">
+      <label for="price">Price</label>
+    </div>
+    <div class="user-input">
+      <input type='number' min='1' name="price" id="price" required/>
+    </div>
+    <div class="user-input">
+      <label for="availability_start">Start date:</label>
+    </div>
+    <div class="user-input">
+      <input type="date" id="availability_start" name="availability_start"required/>
+    </div>
+    <div class="user-input">
+      <label for="availability_end">End date:</label>
+    </div>
+    <div class="user-input">
+      <input type="date" id="availability_end" name="availability_end" required/>
+    </div>
+      <input type="submit" value="List my Space">
+  </form>
+</div>
