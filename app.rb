@@ -4,6 +4,7 @@ require "sinatra/flash"
 require "./lib/property"
 require "./lib/user.rb"
 require "./lib/booking.rb"
+require "./lib/property_filter.rb"
 
 class Makersbnb < Sinatra::Base
   configure :development do
@@ -46,7 +47,7 @@ class Makersbnb < Sinatra::Base
   end
 
   get "/spaces" do
-    @properties = Property.all
+    @properties = PropertyFilter.dates
     @user = User.find(id: session[:user_id]).email
     erb :'spaces/spaces'
   end
@@ -58,6 +59,17 @@ class Makersbnb < Sinatra::Base
   post "/spaces/new" do
     Property.create(name: params[:property_name], description: params[:description], price: params[:price].to_i, user_id: session[:user_id], availability_start: params[:availability_start], availability_end: params[:availability_end])
     redirect ("/spaces")
+  end
+
+  post "/spaces/filter" do
+    PropertyFilter.set_dates(start_date: params[:available_from], end_date: params[:available_to])
+    redirect ('/spaces')
+  end
+
+  post "/spaces/reset" do
+    p params
+    PropertyFilter.set_dates(start_date: params[:available_from], end_date: params[:available_to])
+    redirect ('/spaces')
   end
 
   get "/spaces/:id" do

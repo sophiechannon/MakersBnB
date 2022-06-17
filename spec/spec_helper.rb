@@ -8,6 +8,8 @@ require_relative './web_helper'
 require 'user'
 require 'database_helpers'
 require 'bcrypt'
+require 'property_filter'
+require 'property'
 
 ENV['ENVIRONMENT'] = 'test'
 

@@ -8,6 +8,20 @@
   </form>
 </div>
 
+<div class="centered-container">
+  <form action="/spaces/filter" method="post">
+    <div class="user-input">
+      <label for="available_from">Available from: </label>
+      <input type="date" id="available_from" name="available_from">
+      <label for="available_to">Available to: </label>
+      <input type="date" id="available_to" name="available_to">
+    <input type="submit" value="List Spaces">
+  </form>
+  <form action="/spaces/reset" method="post">
+    <input type="submit" value = "Reset">
+  </form>
+</div>
+
 <div class="property-container">
     <% @properties.each do |property| %>
       <div class="listing">
