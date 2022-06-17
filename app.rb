@@ -1,12 +1,11 @@
 require "sinatra/base"
 require "sinatra/reloader"
 require "sinatra/flash"
+require "./lib/database_connection_setup.rb"
 require "./lib/property"
 require "./lib/user.rb"
-require "./lib/database_connection.rb"
 require "./lib/booking.rb"
 require "date"
-require 'pg'
 
 class Makersbnb < Sinatra::Base
   configure :development do

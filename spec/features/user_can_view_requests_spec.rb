@@ -1,5 +1,5 @@
 feature "view requests" do
-  xscenario "showing requests to book the properties listed by user" do
+  scenario "showing requests to book the properties listed by user" do
     property_owner = User.create(first_name: "Property", last_name: "Owner", email: "property@owner.com", password: "password123")
     property = Property.create(name: "A house in the moutains", description: "A big house in the mountains. You will enjoy the views and the songs of the birds.",
                                price: "50", user_id: property_owner.id, availability_start: "2022-05-10", availability_end: "2022-10-20")
