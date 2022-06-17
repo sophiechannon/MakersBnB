@@ -14,11 +14,15 @@
         <a href="/spaces/<%= property.id %>" id="listing">
           <div class="listing-content">
             <%= property.name %><br>
-            <%= property.description %><br>
+            <% if property.description.length > 60 %>
+              <%= property.description[0..60] %>...<br>
+            <% else %>
+              <%= property.description %><br>
+            <% end %>
             £<%= property.price %>
             <%= User.find(id: property.user_id).email %>
-            availability from:<%= property.availability_start%>
-            until:<%= property.availability_end%>
+            availability from:<%= property.availability_start %>
+            until:<%= property.availability_end %>
           </div>
         </a>
       </div>

@@ -1,1 +1,33 @@
-    Requests I've received
+<div class= centered-container>
+    <h2> Requests </h2>
+        <div class="right-side-container">
+            <h3>Requests I've received</h3>
+            
+                <div class="recieved">
+                <% if @sql_result.cmdtuples > 0 %>
+                    <% @sql_result.each do |booking| %>
+                    <div class="listing-content">
+                        Property: <%= booking['property_name'] %><br>
+                        Status: <%= booking['booking_status'] %><br>
+                        Date requested: <%= booking['booking_date'] %><br>
+                        Customer: <%= booking['email_address'] %><br>
+                    </div>
+                    <% end %>
+                <% else %>
+                    No requests so far.<br>
+                <% end %>
+                </div>
+            
+        </div>
+    
+
+    <div class="right-side-container">
+            <h3>Requests I've made</h3>
+            <div class="booked">
+                Property: <br>
+                Status: <br>
+                Date requested: <br>
+                Customer: <br>
+            </div>
+      </div>
+</div>

@@ -1,6 +1,7 @@
-<div class="centered-container"><h2><%=@property.name%></h2></div>
+<div class="centered-container"><h2><%= @property.name %></h2></div>
+<div class="centered-container"><h2><%= @property.description %></h2></div>
 <div class="centered-container">
-  <form action="/spaces/<%=@property.id%>/book" method="post">
+  <form action="/spaces/<%= @property.id %>/book" method="post">
     <div class="user-input">
       <label for="date">Booking date </label>
       <input type="date" id="date" name="date"

@@ -19,5 +19,14 @@ feature "view requests" do
     expect(page).to have_content "Property: A house in the moutains"
     expect(page).to have_content "Status: PENDING"
     expect(page).to have_content "Date requested: 2022-07-01"
+    expect(page).to have_content "Customer: iain@test.com"
+  end
+
+  scenario 'informing user that he has no relevant requests' do
+    new_user = User.create(first_name: "New", last_name: "User", email: "new@user.com", password: "password123")
+
+    visit('/view-requests')
+    expect(page).to have_content "Requests I've received"
+    expect(page).to have_content "No requests so far."
   end
 end
