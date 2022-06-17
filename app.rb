@@ -86,9 +86,10 @@ class Makersbnb < Sinatra::Base
     else
       @connection = PG.connect(dbname: "makersbnb")
     end
-    @bookings = @connection.exec_params("SELECT * FROM bookings INNER JOIN properties ON bookings.property_id = properties.id WHERE $1 = properties.user_id",
+    @sql_result = @connection.exec_params("SELECT * FROM bookings INNER JOIN properties ON bookings.property_id = properties.id WHERE properties.user_id = $1",
     [session[:user_id]])
-    puts "the SQL passed!"
+    # a Booking class object is not enough to hold all the data returns. need a new class?
+    
     erb :'/requests/view'
   end
 
