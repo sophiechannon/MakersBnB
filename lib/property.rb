@@ -16,11 +16,7 @@ class Property
   end
 
   def self.all
-    if ENV["ENVIRONMENT"] == "test"
-      @connection = PG.connect(dbname: "makersbnb_test")
-    else
-      @connection = PG.connect(dbname: "makersbnb")
-    end
+    database_connection
     result = @connection.exec_params(
       "SELECT * from properties", []
     )
@@ -31,11 +27,7 @@ class Property
   end
 
   def self.create(name:, description:, price:, user_id:, availability_start:, availability_end:)
-    if ENV["ENVIRONMENT"] == "test"
-      @connection = PG.connect(dbname: "makersbnb_test")
-    else
-      @connection = PG.connect(dbname: "makersbnb")
-    end
+    database_connection
     result = @connection.exec_params(
       "INSERT INTO properties (property_name, property_description, price_per_night, user_id, availability_start_date, availability_end_date) VALUES($1, $2, $3, $4, $5, $6) RETURNING property_name, property_description, price_per_night, user_id, availability_start_date, availability_end_date, id", 
       [name, description, price, user_id, availability_start, availability_end]
@@ -45,11 +37,7 @@ class Property
 
   def self.find(id:)
     return nil if id == nil
-    if ENV['ENVIRONMENT'] == 'test'
-      @connection = PG.connect(dbname: 'makersbnb_test')
-    else
-      @connection = PG.connect(dbname: 'makersbnb')
-    end
+    database_connection
     result = @connection.exec_params(
       "SELECT * FROM properties WHERE id = $1",
       [id]
